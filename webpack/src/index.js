@@ -30,18 +30,17 @@ const listedTasks = [
 
 const tasksContainer = document.getElementById('tasks-container');
 
-const listContainer = document.createElement ('ul');
+const listContainer = document.createElement('ul');
 tasksContainer.className = 'tasks';
 tasksContainer.appendChild(listContainer);
 
-listedTasks.forEach(listedItems);
-
-function listedItems (task) {
+function listedItems(task) {
   const taskList = document.createElement('li');
   taskList.className = 'task-list';
   taskList.innerHTML = `
   <input class="checkbox" type="checkbox" />
   <label class="list-label">${task.description} <i class="fa-solid fa-ellipsis-vertical fa-icon"></i></label>
-  `
-  return listContainer.appendChild(taskList);  
+  `;
+  return listContainer.appendChild(taskList);
 }
+listedTasks.forEach(listedItems);
