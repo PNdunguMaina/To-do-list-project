@@ -1,7 +1,83 @@
 body {
+  box-sizing: border-box;
   background-color: bisque;
 }
 
-.hello {
-  color: black;
+#main {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+}
+
+input {
+  margin-top: 20px;
+  border-style: none;
+  padding: 30px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid black;
+  font-size: 2rem;
+}
+
+#add-list::placeholder {
+  font-size: 2rem;
+  padding: 1.5rem;
+  height: 80px;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
+  background-color: beige;
+}
+
+.task-list:hover {
+  background-color: #fff;
+}
+
+.task-list:last-child {
+  margin-bottom: 50px;
+}
+.list-label {
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.fa-ellipsis-vertical {
+  position: absolute;
+  display: flex;
+  margin-left: 33rem;
+  transform: translateY(-100%);
+}
+
+button {
+  border-style: none;
+  position: fixed;
+  background-color: gray;
+  bottom: 0;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  width: 100vw;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: aqua;
 }
