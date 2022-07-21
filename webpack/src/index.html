@@ -18,9 +18,10 @@
     <div id="main">
       <header>
         <h2>Today's To Do</h2>
-        <i class="fa-solid fa-arrows-rotate fa-icon" aria-hidden="true"></i>
+        <i class="fas fa-sync"></i></i>
       </header>
-      <label for="add-list"></label>
+      <form action="">
+        <label for="add-list"></label>
       <input
         type="text"
         id="add-list"
@@ -28,8 +29,10 @@
         placeholder="Add to my list..."
       />
       <div id="tasks-container"></div>
-      <button class="delete">Clear all completed</button>
+      <button type="button" id="clear" class="clear">Clear all completed</button>
+      </form>
+      
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="./modules/event.js"></script>
   </body>
 </html>

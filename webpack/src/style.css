@@ -1,84 +1,91 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  background-color: bisque;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(241, 147, 33);
+  padding-top: 2rem;
 }
 
 #main {
-  display: flex;
-  flex-direction: column;
-  margin: 2.5rem;
-  padding: 2rem;
+  box-shadow: 1px 6px 17px -1px #f0f8ff;
+  background-color: #f0f8ff;
+  padding-top: 2rem;
+  min-height: 100vh;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  border-bottom: 2px solid black;
-  padding-bottom: 30px;
+  padding: 30px 15px;
+  width: 50vw;
 }
 
-input {
-  margin-top: 20px;
-  border-style: none;
-  padding: 30px;
-  padding-bottom: 50px;
-  border-bottom: 2px solid black;
-  font-size: 2rem;
-}
-
-#add-list::placeholder {
-  font-size: 2rem;
-  padding: 1.5rem;
-  height: 80px;
-}
-
-.task-list {
-  list-style: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid black;
-  padding-bottom: 1rem;
-  background-color: beige;
-}
-
-.task-list:hover {
-  background-color: #fff;
-}
-
-.task-list:last-child {
-  margin-bottom: 50px;
-}
-
-.list-label {
-  padding-left: 1.5rem;
+#add-list {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
   font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
-.fa-ellipsis-vertical {
-  position: absolute;
+.task-container {
   display: flex;
-  margin-left: 33rem;
-  transform: translateY(-100%);
+  padding: 30px 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #f0f8ff;
 }
 
-button {
-  border-style: none;
-  position: fixed;
-  background-color: gray;
-  bottom: 0;
-  height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  width: 100vw;
-  font-size: 2rem;
+.checkbox {
+  width: 10%;
+}
+
+small {
+  width: 80%;
+}
+
+.clear {
+  width: 50vw;
+  border: none;
+  padding: 20px 0;
   cursor: pointer;
+  background-color: #d0d0d0;
+  font-size: 1.5rem;
+  color: rgb(16, 12, 12);
+  bottom: 0;
+  position: fixed;
 }
 
-button:hover,
-button:focus {
-  background-color: aqua;
+.clear:hover {
+  background-color: red;
+  color: black;
+}
+
+.fa-trash {
+  display: none;
+}
+
+.trash-active {
+  display: inline-flex;
+}
+
+.checked-box {
+  background-color: burlywood;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.ellipsis-inactive {
+  display: none;
 }
