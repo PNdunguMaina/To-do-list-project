@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 import ToDoTasks from './modules/mainClassContainer';
 import { editTask } from './modules/addRemoveTasks';
