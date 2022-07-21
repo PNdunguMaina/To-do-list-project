@@ -1,16 +1,13 @@
+import _ from 'lodash';
+import './style.css';
+import ToDoTasks from './modules/mainClassContainer';
+import { editTask } from './modules/addRemoveTasks';
+import updateLocalStorage from './modules/getLocalStorage';
+
 // All references to HTML
 const inputField = document.getElementById('add-list');
 const listContainer = document.getElementById('tasks-container');
 const clearBtn = document.getElementById('clear');
-
-// Template class object
-class ToDoTasks {
-  constructor(description, completed, index) {
-    this.description = description;
-    this.completed = completed;
-    this.index = index;
-  }
-}
 
 // initialize our main array of objects
 const myTasksArr = [];
@@ -58,6 +55,7 @@ const addTask = (task) => {
     });
   });
 };
+
 // remove task function
 const removeTask = (task) => {
   listContainer.removeChild(task);
@@ -71,29 +69,7 @@ const removeTask = (task) => {
     localStorage.setItem('toDoList', localData);
   });
 };
-// edit task function
-const editTask = (taskContainer, task) => {
-  const editArea = document.createElement('input');
-  editArea.classList.add('edit-area');
-  editArea.setAttribute('type', 'text');
-  editArea.setAttribute('value', task.textContent);
-  taskContainer.replaceChild(editArea, task);
-  editArea.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      const containers = document.querySelectorAll('.task-container');
-      const localStore = JSON.parse(localStorage.getItem('toDoList'));
-      for (let i = 0; i < containers.length; i++) {
-        if (containers[i].classList.contains('checked-box')) {
-          localStore[i].description = editArea.value;
-          localStorage.setItem('toDoList', JSON.stringify(localStore));
-        }
-      }
-      editArea.parentElement.classList.remove('checked-box');
-      taskContainer.replaceChild(task, editArea);
-      task.textContent = editArea.value;
-    }
-  });
-};
+
 // event handler to display the to do task
 inputField.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && inputField.value) {
@@ -150,21 +126,6 @@ const obtainFromLocalStorage = () => {
 };
 
 window.onload = obtainFromLocalStorage;
-// update local storage for the completed tasks
-const updateLocalStorage = () => {
-  const localStore = JSON.parse(localStorage.getItem('toDoList'));
-  const toDos = document.querySelectorAll('small');
-
-  for (let i = 0; i < toDos.length; i++) {
-    if (toDos[i].classList.contains('line-through')) {
-      localStore[i].completed = true;
-    } else {
-      localStore[i].completed = false;
-    }
-  }
-
-  localStorage.setItem('toDoList', JSON.stringify(localStore));
-};
 
 // clear all completed function
 const clearAll = () => {

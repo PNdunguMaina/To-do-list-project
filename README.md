@@ -20,6 +20,23 @@
 
 Navigate to the cloned project -Open index.html file
 
+## To run the cloned repository using webpack follow these simple example steps.
+
+### Step 1
+
+Navigate to the webpack directory
+[] Use the _$cd webpack_ command in the terminal
+
+### Step 2
+
+Create a build directory with a production build of the app
+[] Use the _$npm run build_ command in the terminal
+
+### Step 3
+
+Load the page in the browser via the local host http://localhost:8080/
+[] Use the _$npm start_ command in the terminal
+
 ## Author
 
 👤 **Patrick Maina**

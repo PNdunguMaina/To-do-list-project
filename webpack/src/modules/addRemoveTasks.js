@@ -1,17 +1,3 @@
-import { listContainer } from "./index";
-// remove task function
-const removeTask = (task) => {
-  listContainer.removeChild(task);
-  let count = 1;
-  const localStore = JSON.parse(localStorage.getItem('toDoList'));
-  const localData = Array.from(localStore).filter((i) => {
-    i.completed === false;
-  });
-  localData.map((i) => {
-    i.index = count + 1;
-    localStorage.setItem('toDoList', localData);
-  });
-};
 // edit task function
 const editTask = (taskContainer, task) => {
   const editArea = document.createElement('input');
@@ -36,4 +22,4 @@ const editTask = (taskContainer, task) => {
   });
 };
 
-export { removeTask, editTask };
+export { editTask };
