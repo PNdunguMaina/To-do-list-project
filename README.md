@@ -10,6 +10,9 @@
   -Technologies: Visual Studio code
 - Other technologies: Eslint, webpack
 
+## Live Demo
+[Click here](https://pndungumaina.github.io/To-do-list-project/) to see the live version of my project.
+
 ## To get a local copy up and running follow these simple example steps.
 
 ### Step 1
