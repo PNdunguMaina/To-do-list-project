@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const removeTask = (task) => {
   const listContainer = document.getElementById('tasks-container');
   listContainer.removeChild(task);
