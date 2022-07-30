@@ -57,8 +57,9 @@ const addTask = (task) => {
 
 // remove task function
 const removeTask = (task) => {
+  const listContainer = document.getElementById('tasks-container');
   listContainer.removeChild(task);
-  let count = 1;
+  let count = 0;
   const localStore = JSON.parse(localStorage.getItem('toDoList'));
   const localData = Array.from(localStore).filter((i) => {
     i.completed === false;
