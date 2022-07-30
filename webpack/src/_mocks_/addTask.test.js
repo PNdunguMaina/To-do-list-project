@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 document.body.innerHTML = `
     <div id="tasks-container">
     <div id="task" class="task"></div>
