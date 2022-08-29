@@ -7,7 +7,7 @@
 ## Built With
 
 - Languages: HTML, CSS, Javascript
-  -Technologies: Visual Studio code
+-Technologies: Visual Studio code
 - Other technologies: Eslint, webpack
 
 ## Live Demo
@@ -17,7 +17,9 @@
 
 ### Step 1
 
-[Click here](https://github.com/PNdunguMaina/To-do-list-project.git) to get to my repository in Github. -Copy the link on the code button on the right (green in color). -Clone the link in your local folder
+[Click here](https://github.com/PNdunguMaina/To-do-list-project.git) to get to my repository in Github. 
+-Copy the link on the code button on the right (green in color). 
+-Clone the link in your local folder
 
 ### Step 2
 
@@ -28,17 +30,17 @@ Navigate to the cloned project -Open index.html file
 ### Step 1
 
 Navigate to the webpack directory
-[] Use the _$cd webpack_ command in the terminal
+- Use the _$cd webpack_ command in the terminal
 
 ### Step 2
 
 Create a build directory with a production build of the app
-[] Use the _$npm run build_ command in the terminal
+- Use the _$npm run build_ command in the terminal
 
 ### Step 3
 
 Load the page in the browser via the local host http://localhost:8080/
-[] Use the _$npm start_ command in the terminal
+- Use the _$npm start_ command in the terminal
 
 ## Author
 
